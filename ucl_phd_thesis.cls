@@ -51,7 +51,7 @@
 \newboolean{acronyms}
 \newboolean{edge_labels}
 \newboolean{final_thesis}
-\newboolean{double_spacing} % Legacy name: true selects one-and-a-half thesis spacing.
+\newboolean{double_spacing}
 
 
 
@@ -98,7 +98,7 @@
 
 
 \newcommand{\thesisspacing}{
-\ifthenelse{\boolean{double_spacing}}{\onehalfspacing}{\singlespacing}
+\ifthenelse{\boolean{double_spacing}}{\doublespacing}{\singlespacing}
 }
 
 \def\maketitle{
