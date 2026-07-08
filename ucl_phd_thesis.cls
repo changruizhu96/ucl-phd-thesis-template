@@ -134,10 +134,10 @@
     \begin{center}
 	  \vspace*{\fill}
     \vskip 2cm
-      {\setstretch{1.15}\huge\sffamily\bfseries \@title\par}
+      {\setstretch{1.15}\huge\sffamily\bfseries\color{ThesisAccent} \@title\par}
       \ifthenelse{\equal{\@subtitle}{}}{}{
         \vskip 0.5cm
-        {\Large\sffamily \@subtitle}
+        {\Large\sffamily\color{ThesisAccent} \@subtitle}
       }
       \vskip 2cm
       Author\\[2mm]
@@ -223,16 +223,14 @@
 \fancypagestyle{fancy}{
 \fancyhead{}
 \fancyfoot{}
-\fancyhead[L]{\footnotesize\sffamily\color{ThesisMuted}\nouppercase{\rightmark}}
-\fancyfoot[R]{\small\thepage}
-\renewcommand{\headrulewidth}{0.25pt}
-\renewcommand{\headrule}{\hbox to\headwidth{%
-  \color{ThesisAccentSoft}\leaders\hrule height \headrulewidth\hfill}}
+\fancyhead[L]{\footnotesize\sffamily\color{ThesisAccent}\nouppercase{\rightmark}}
+\fancyfoot[R]{\small\color{ThesisAccent}\thepage}
+\renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 }
 \fancypagestyle{plain}{%
   \fancyhf{}%
-\fancyfoot[R]{\small\thepage}
+\fancyfoot[R]{\small\color{ThesisAccent}\thepage}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
   \Materialfalse
@@ -303,9 +301,9 @@
 \RequirePackage{titlesec}
 \titleformat{\chapter}[display]
   {\normalfont\sffamily\bfseries}
-  {\raggedleft\fontsize{82}{86}\selectfont\color{ThesisAccentSoft}\thechapter}
+  {\raggedleft\fontsize{82}{86}\selectfont\color{ThesisAccent}\thechapter}
   {-12pt}
-  {\Huge\raggedright\color{ThesisText}}
+  {\Huge\raggedright\color{ThesisAccent}}
 \titlespacing*{\chapter}{0pt}{18pt}{28pt}
 \titleformat{\section}
   {\normalfont\sffamily\Large\bfseries}

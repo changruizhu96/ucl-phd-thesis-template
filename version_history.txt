@@ -1,5 +1,8 @@
 This file reports the changes between template versions.
 
+*v2.0.8 - 09/07/2026
+- Set major thesis titles, running headers, and page numbers in the UCL deep purple, and removed the running header rule for a cleaner navigation layer.
+
 *v2.0.7 - 08/07/2026
 - Unified the visual colour system around black text, muted navigation, and restrained UCL purple accents; added the symmetricmargins class option for electronic drafts.
 
