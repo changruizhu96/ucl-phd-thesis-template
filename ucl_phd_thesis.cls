@@ -8,6 +8,9 @@
 
 \PassOptionsToPackage{dvipsnames}{xcolor}
 
+\newif\ifuclsymmetricmargins
+\uclsymmetricmarginsfalse
+\DeclareOption{symmetricmargins}{\uclsymmetricmarginstrue}
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{book}}
 \ProcessOptions\relax
 
@@ -68,6 +71,10 @@
 \newlength{\marginbottom} \setlength{\marginbottom}{3cm}  
 \newlength{\marginhead} \setlength{\marginhead}{1cm}
 \newlength{\marginfoot} \setlength{\marginfoot}{0.8cm}
+\ifuclsymmetricmargins
+  \setlength{\marginleft}{2.5cm}
+  \setlength{\marginright}{2.5cm}
+\fi
 
 \geometry{a4paper, top=\margintop, left=\marginleft, right=\marginright, bottom=\marginbottom, headsep=\marginhead, footskip=\marginfoot, nomarginpar}
 
@@ -192,17 +199,22 @@
 \definecolor{UCLMidPurple}{HTML}{BA82FF}
 \definecolor{UCLHeritageBlue}{HTML}{30D6FF}
 \colorlet{UCLPrimary}{UCLDarkPurple}
+\colorlet{ThesisText}{black}
+\colorlet{ThesisMuted}{black!55}
+\colorlet{ThesisAccent}{UCLPrimary}
+\colorlet{ThesisAccentSoft}{UCLPrimary!24}
+\colorlet{ThesisAccentText}{UCLPrimary!85!black}
 \hypersetup{hidelinks}
 
 \newcommand{\chapterpublicationnote}[1]{%
   \begingroup
   \singlespacing
-  \vspace{0.5cm}
-  \noindent\textcolor{UCLPrimary}{\rule{\textwidth}{0.6pt}}\par
-  \noindent\textbf{\textcolor{UCLPrimary}{Publication note.}} #1\par
-  \vspace{-0.5ex}
-  \noindent\textcolor{UCLPrimary}{\rule{\textwidth}{0.6pt}}\par
-  \vspace{0.5cm}
+  \vspace{0.4cm}
+  \noindent\textcolor{ThesisAccentSoft}{\rule{1.2pt}{2.4\baselineskip}}\hspace{0.8em}%
+  \begin{minipage}[t]{\dimexpr\textwidth-1.2pt-0.8em\relax}
+    \small\setstretch{1.12}\textbf{Publication note.} #1
+  \end{minipage}\par
+  \vspace{0.45cm}
   \endgroup
   \thesisspacing
 }
@@ -211,11 +223,11 @@
 \fancypagestyle{fancy}{
 \fancyhead{}
 \fancyfoot{}
-\fancyhead[L]{\footnotesize\sffamily\color{black!55}\nouppercase{\rightmark}}
+\fancyhead[L]{\footnotesize\sffamily\color{ThesisMuted}\nouppercase{\rightmark}}
 \fancyfoot[R]{\small\thepage}
 \renewcommand{\headrulewidth}{0.25pt}
 \renewcommand{\headrule}{\hbox to\headwidth{%
-  \color{UCLPrimary!30}\leaders\hrule height \headrulewidth\hfill}}
+  \color{ThesisAccentSoft}\leaders\hrule height \headrulewidth\hfill}}
 \renewcommand{\footrulewidth}{0pt}
 }
 \fancypagestyle{plain}{%
@@ -291,9 +303,9 @@
 \RequirePackage{titlesec}
 \titleformat{\chapter}[display]
   {\normalfont\sffamily\bfseries}
-  {\raggedleft\fontsize{82}{86}\selectfont\color{black!25}\thechapter}
+  {\raggedleft\fontsize{82}{86}\selectfont\color{ThesisAccentSoft}\thechapter}
   {-12pt}
-  {\Huge\raggedright\color{black}}
+  {\Huge\raggedright\color{ThesisText}}
 \titlespacing*{\chapter}{0pt}{18pt}{28pt}
 \titleformat{\section}
   {\normalfont\sffamily\Large\bfseries}
