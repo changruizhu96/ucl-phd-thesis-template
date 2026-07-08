@@ -1,5 +1,8 @@
 This file reports the changes between template versions.
 
+*v2.0.4 - 08/07/2026
+- Changed the default thesis body spacing from double spacing to one-and-a-half spacing.
+
 *v2.0.3 - 08/07/2026
 - Added a standalone PDF preview file for the GitHub repository.
 
