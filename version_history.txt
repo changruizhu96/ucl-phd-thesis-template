@@ -1,5 +1,8 @@
 This file reports the changes between template versions.
 
+*v2.0.3 - 08/07/2026
+- Added a standalone PDF preview file for the GitHub repository.
+
 *v2.0.2 - 08/07/2026
 - Generalised the template placeholder text by removing project-specific example content.
 - Replaced specific title-page metadata with neutral placeholders.

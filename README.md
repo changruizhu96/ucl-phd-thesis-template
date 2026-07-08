@@ -2,6 +2,8 @@
 
 This repository contains a UCL-branded PhD thesis LaTeX template adapted from an Imperial College report template.
 
+PDF preview: [`preview.pdf`](preview.pdf)
+
 ## Compile
 
 Use LuaLaTeX. On Overleaf, the included `latexmkrc` should select LuaLaTeX automatically. If Overleaf still reports a `fontspec` error, set **Menu > Compiler > LuaLaTeX** manually.
