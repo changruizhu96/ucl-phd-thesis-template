@@ -66,8 +66,8 @@
 
 \newlength{\logowidth}    \setlength{\logowidth}{55mm}
 \newlength{\logopad}      \setlength{\logopad}{17.5mm}
-\newlength{\marginleft}   \setlength{\marginleft}{2.5cm}
-\newlength{\marginright}  \setlength{\marginright}{2.5cm}
+\newlength{\marginleft}   \setlength{\marginleft}{3cm}
+\newlength{\marginright}  \setlength{\marginright}{3cm}
 \newlength{\margintop}    \setlength{\margintop}{3cm}
 \newlength{\marginbottom} \setlength{\marginbottom}{3cm}  
 \newlength{\marginhead} \setlength{\marginhead}{1cm}
