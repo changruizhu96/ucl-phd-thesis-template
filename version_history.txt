@@ -1,0 +1,12 @@
+This file reports the changes between template versions.
+
+*v2.0.0 - 07/07/2026
+- Adapted the original report template into a UCL PhD thesis template.
+- Replaced the title-page logo with the current UCL brand logo image.
+- Updated page headers, chapter titles, and edge labels to use the UCL purple palette.
+- Simplified the setup section for PhD thesis metadata.
+- Replaced institution-specific copyright guidance with a UCL submission placeholder.
+- Added a thesis-by-publication structure with a publications and author contributions page.
+- Added four paper-based chapter templates and a reusable chapter publication note.
+- Added Overleaf latexmkrc and pdfLaTeX fallback package loading to avoid fontspec engine errors.
+- Changed the default book layout to oneside/openany to avoid automatically inserted blank pages in the electronic thesis version.

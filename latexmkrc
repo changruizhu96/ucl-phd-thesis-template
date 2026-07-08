@@ -1,0 +1,4 @@
+$pdf_mode = 4;
+$lualatex = 'lualatex -interaction=nonstopmode -file-line-error -synctex=1 %O %S';
+$pdflatex = 'lualatex -interaction=nonstopmode -file-line-error -synctex=1 %O %S';
+$biber = 'biber %O %B';

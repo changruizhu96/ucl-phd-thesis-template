@@ -1,0 +1,124 @@
+% Template for a UCL PhD thesis
+% Department of Computer Science - University College London
+%
+% INSTRUCTIONS
+% (1) Compile using LuaLaTeX. On Overleaf, the included latexmkrc file should select LuaLaTeX automatically.
+%     If not, click Menu and set Compiler to LuaLaTeX.
+% (2) Complete the SETUP below
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% DO NOT MODIFY FROM HERE ...
+\documentclass[11pt]{ucl_phd_thesis}
+
+\usepackage[style=ieee,backend=biber,hyperref=auto]{biblatex}
+\addbibresource{references.bib}
+% ... TO HERE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%% SETUP %%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% EDIT THE FOLLOWING INFORMATION WITH YOUR DATA
+% LINES STARTING WITH % ARE COMMENTS.
+% MAKE SURE YOU CHECK AND UPDATE ALL INFORMATION, INCLUDING SUBMITYEAR
+
+
+%%%%%%%%%%% PART A %%%%%%%%%%%
+% \degree{PhD} prints "Doctor of Philosophy" on the title page.
+\degree{PhD}
+
+\title{From Internal Reference to Persistent Change Signals: Human-in-the-Loop 3D Change Detection in Extended Reality}
+\subtitle{} % Add a subtitle if needed.
+\author{N.S. Surname}
+\studentid{00000000}
+\supervisor{Dr N.S. Surname \\[1mm] Prof. A. Another} %UK: Dr no dot, prof has dot
+\department{Department of Computer Science}
+\university{University College London}
+\submityear{2025}
+
+
+% Do you want a list of figures?
+% Do you want a list of tables?
+% Do you want an acknowledgement page?
+% Do you want an impact statement?
+% Do you want a publications and author contributions page?
+% Do you want a list of acronyms?
+\setboolean{list_of_figures}{false} % Set true after adding figures.
+\setboolean{list_of_tables}{false} % false or true - Default is false
+\setboolean{acknowledgement}{true} % false or true - Default is true
+\setboolean{impact_statement}{true} % false or true - Default is true
+\setboolean{publications}{true} % false or true - Default is true
+\setboolean{acronyms}{false} % Set true if you maintain chapters/ListAcronyms.tex and use acronyms in the text.
+
+% If you want to print your thesis with coloured chapter tabs at the page edge, set this to true. It is just a visual setting.
+\setboolean{edge_labels}{false}
+
+% The default is double spacing. Change this to false only if your supervisor or departmental guidance requires single spacing.
+\setboolean{double_spacing}{true}
+
+%%%%%%%%%%%%% END SETUP %%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% ADDITIONAL PACKAGES
+% You can add your packages below. Note that the following packages are already loaded:
+% pgfcore, geometry, bookmark, graphicx, setspace, kantlipsum, iftex, minitoc,
+% silence, background, xpatch, tikzpagenodes, totcount, fancyhdr, titlesec, and
+% the tikz libraries calc, shapes.symbols and shapes.misc. The class loads
+% fontspec/polyglossia with LuaLaTeX or XeLaTeX, and fontenc/inputenc/babel with pdfLaTeX.
+
+%Examples
+\usepackage{amsmath}
+\usepackage{amsfonts} 
+%...
+
+% ADDITIONAL COMMANDS
+%Examples
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\vect}{vec}
+%...
+
+
+\begin{document}
+
+\preamble % Do not change - required
+
+% EDIT THE CONTENT OF THE FILES
+% OrigSta_Copyright.tex
+% Abstract.tex
+% ImpactStatement.tex
+% Acknowledgement.tex
+% PublicationsAndContributions.tex
+% You can find them under the folder 
+% "chapters" on the left column
+
+% Thesis-by-publication structure:
+% use one introduction chapter, one chapter per publication, and a synthesis chapter.
+\input{Chapter1.tex}
+\input{PaperChapter1.tex}
+\input{PaperChapter2.tex}
+\input{PaperChapter3.tex}
+\input{PaperChapter4.tex}
+\input{Synthesis.tex}
+
+% You can change the title of the conclusions by changing the text between { }
+\conclusions{Conclusions and future directions} % Do not remove - required
+% EDIT THE CONTENT OF THE FILE
+% Conclusions.tex
+% You can find it under the folder 
+% "chapters" on the left column
+
+% APPENDICES ARE OPTIONAL
+% COMMENT OUT BOTH LINES BELOW TO REMOVE THEM
+% ADD CHAPTERS TO ADD MULTIPLE APPENDICES
+\appendix 
+\input{AppendixA.tex}
+%\input{AppendixB.tex} % Example second appendix (need to create the file in "chapters")
+
+
+\cleardoublepage % Do not change - required
+\RemoveLabels % Do not change - required
+\thesisspacing % Do not change - required
+\printbibliography[title={Bibliography},heading=bibintoc] % Do not change - required
+
+\end{document}
