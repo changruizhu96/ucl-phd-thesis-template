@@ -14,15 +14,15 @@ main.tex
 
 ## Layout modes
 
-The default class layout keeps the UCL binding margin: 4cm at the binding edge and 2.5cm at the outer edge. This is the safer setting for final submission or printing.
+The default class layout uses symmetrical 2.5cm side margins for both electronic drafting and general thesis writing.
 
-For electronic drafting and reading, you can use symmetrical 2.5cm side margins:
+If a print copy requires a larger binding edge, add the `bindingmargins` class option:
 
 ```tex
-\documentclass[11pt,symmetricmargins]{ucl_phd_thesis}
+\documentclass[11pt,bindingmargins]{ucl_phd_thesis}
 ```
 
-Remove `symmetricmargins` before final submission if your department expects the UCL binding-edge margin.
+This sets a 4cm left binding edge and keeps the right margin at 2.5cm.
 
 ## Thesis-by-publication structure
 

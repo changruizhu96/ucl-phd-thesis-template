@@ -8,9 +8,10 @@
 
 \PassOptionsToPackage{dvipsnames}{xcolor}
 
-\newif\ifuclsymmetricmargins
-\uclsymmetricmarginsfalse
-\DeclareOption{symmetricmargins}{\uclsymmetricmarginstrue}
+\newif\ifuclbindingmargins
+\uclbindingmarginsfalse
+\DeclareOption{bindingmargins}{\uclbindingmarginstrue}
+\DeclareOption{symmetricmargins}{\uclbindingmarginsfalse}
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{book}}
 \ProcessOptions\relax
 
@@ -65,14 +66,14 @@
 
 \newlength{\logowidth}    \setlength{\logowidth}{55mm}
 \newlength{\logopad}      \setlength{\logopad}{17.5mm}
-\newlength{\marginleft}   \setlength{\marginleft}{4cm}   % UCL binding-edge margin minimum is 4cm
-\newlength{\marginright}  \setlength{\marginright}{2.5cm} 
+\newlength{\marginleft}   \setlength{\marginleft}{2.5cm}
+\newlength{\marginright}  \setlength{\marginright}{2.5cm}
 \newlength{\margintop}    \setlength{\margintop}{3cm}
 \newlength{\marginbottom} \setlength{\marginbottom}{3cm}  
 \newlength{\marginhead} \setlength{\marginhead}{1cm}
 \newlength{\marginfoot} \setlength{\marginfoot}{0.8cm}
-\ifuclsymmetricmargins
-  \setlength{\marginleft}{2.5cm}
+\ifuclbindingmargins
+  \setlength{\marginleft}{4cm} % Binding-edge margin for print copies when required.
   \setlength{\marginright}{2.5cm}
 \fi
 
@@ -128,7 +129,7 @@
     \hypertarget{TitlePage}{}
     \bookmark[dest=TitlePage,level=-1]{Front matter}
 	\phantomsection \pdfbookmark[section]{Title page}{title}
-    \pgfdeclareimage[width=\logowidth]{UCL_Logo}{UCL_Logo}
+    \pgfdeclareimage[width=\logowidth]{UCL_Logo}{UCL_Logo.pdf}
     \pgftext[at=\pgfpoint{-\marginleft+\logopad}{\margintop+\parskip-\logopad}, top, left]{\pgfuseimage{UCL_Logo}}
 
     \begin{center}
