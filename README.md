@@ -17,6 +17,7 @@ main.tex
 The template includes a front-matter section for publications and author contributions, followed by:
 
 - `chapters/Chapter1.tex` for the general introduction
+- `chapters/LiteratureReview.tex` for the thesis-level literature review
 - `chapters/PaperChapter1.tex` to `chapters/PaperChapter4.tex` for paper-based chapters
 - `chapters/Synthesis.tex` for cross-paper synthesis
 - `chapters/Conclusions.tex` for conclusions and future work

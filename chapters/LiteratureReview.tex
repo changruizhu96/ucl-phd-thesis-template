@@ -1,0 +1,49 @@
+\doublespacing % Do not change - required
+
+\chapter{Literature Review}
+\label{ch:literature-review}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% IMPORTANT
+\begin{spacing}{1} %THESE FOUR
+\minitoc % LINES MUST APPEAR IN
+\end{spacing} % EVERY
+\thesisspacing % CHAPTER
+% COPY THEM IN ANY NEW CHAPTER
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Purpose and scope}
+
+Use this chapter to establish the thesis-level research context before the paper-based chapters begin. The literature review should explain the main bodies of work that the thesis builds on, compare their assumptions and limitations, and identify the gap that motivates the four publications.
+
+For a thesis by publication, this chapter should not simply repeat the related work sections from the papers. Instead, it should synthesise the shared intellectual background across the thesis and make clear how the later paper chapters fit within that landscape.
+
+\section{3D change detection and scene understanding}
+
+Summarise work on 3D reconstruction, scene representation, and change detection. Organise this section by technical approach or problem setting rather than by publication date. A useful pattern is to describe the dominant paradigm, identify the assumptions it makes about data, scene stability, or supervision, and then explain why those assumptions leave space for this thesis.
+
+Add citations to the strongest and most recent baselines in this area. Avoid presenting the literature as a list of papers; group methods by the mechanism or limitation that matters for the thesis.
+
+\section{Human-in-the-loop perception and interactive correction}
+
+Discuss methods that involve user feedback, interactive refinement, active learning, correction interfaces, or human-guided perception systems. The goal is to position the thesis against work where the human is treated as a source of supervision, verification, or decision-making rather than as a passive observer.
+
+End this section by clarifying how the thesis uses human input differently from the closest prior work. The distinction should be technical and specific, for example in terms of when feedback is collected, how it changes the system state, or how it persists across time.
+
+\section{Extended reality interfaces for spatial understanding}
+
+Review work on augmented, mixed, or extended reality interfaces for inspecting spatial data, supporting situated decision-making, or interacting with digital representations of physical environments.
+
+This section should connect interface design choices to the thesis problem. Focus on how spatial context, embodied interaction, visibility of uncertainty, or in-situ feedback affects the change detection workflow.
+
+\section{Datasets, evaluation, and deployment constraints}
+
+Summarise the evaluation practices used in the relevant literature, including common datasets, metrics, experimental protocols, and deployment assumptions. This section should make clear which aspects of the thesis can be compared directly to prior work and which require a different evaluation framing.
+
+Use this section to surface practical constraints such as sensor noise, scene dynamics, annotation cost, user burden, latency, and transfer across environments.
+
+\section{Summary and thesis positioning}
+
+Conclude the literature review by restating the gap that the thesis addresses. This section should act as a bridge into Chapter~\ref{ch:paper1}: explain why the first paper-based chapter is the natural first technical step after the literature review.
+
+The final paragraph should make the chapter sequence feel deliberate: Chapter~\ref{ch:paper1} introduces the first contribution, Chapters~\ref{ch:paper2}--\ref{ch:paper4} extend or evaluate the thesis from complementary angles, and Chapter~\ref{ch:synthesis} later integrates the findings.

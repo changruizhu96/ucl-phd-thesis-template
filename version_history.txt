@@ -1,5 +1,8 @@
 This file reports the changes between template versions.
 
+*v2.0.1 - 08/07/2026
+- Added a thesis-level literature review chapter between the introduction and the paper-based chapters.
+
 *v2.0.0 - 07/07/2026
 - Adapted the original report template into a UCL PhD thesis template.
 - Replaced the title-page logo with the current UCL brand logo image.
