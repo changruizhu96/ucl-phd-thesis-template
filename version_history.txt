@@ -1,5 +1,8 @@
 This file reports the changes between template versions.
 
+*v2.0.6 - 08/07/2026
+- Adjusted the book-like style toward a single-column SIGGRAPH-inspired layout with wider readable measure, Libertinus fonts when available, upright headers, sans structural headings, and title-case title page text.
+
 *v2.0.5 - 08/07/2026
 - Introduced a quieter book-like thesis style with narrower text block, reduced paragraph spacing, lighter headers, hidden hyperlink boxes, and more restrained chapter openings.
 

@@ -27,10 +27,14 @@
   \RequirePackage[T1]{fontenc}
   \RequirePackage[utf8]{inputenc}
   \RequirePackage[english]{babel}
+  \IfFileExists{libertinus.sty}{\RequirePackage{libertinus}}{}
 \else
   \RequirePackage{fontspec}
   \RequirePackage{polyglossia}
   \setdefaultlanguage{english}
+  \IfFontExistsTF{Libertinus Serif}{\setmainfont{Libertinus Serif}}{}
+  \IfFontExistsTF{Libertinus Sans}{\setsansfont{Libertinus Sans}}{}
+  \IfFontExistsTF{Libertinus Mono}{\setmonofont{Libertinus Mono}}{}
 \fi
 
 \RequirePackage{minitoc}
@@ -59,7 +63,7 @@
 \newlength{\logowidth}    \setlength{\logowidth}{55mm}
 \newlength{\logopad}      \setlength{\logopad}{17.5mm}
 \newlength{\marginleft}   \setlength{\marginleft}{4cm}   % UCL binding-edge margin minimum is 4cm
-\newlength{\marginright}  \setlength{\marginright}{4cm} 
+\newlength{\marginright}  \setlength{\marginright}{2.5cm} 
 \newlength{\margintop}    \setlength{\margintop}{3cm}
 \newlength{\marginbottom} \setlength{\marginbottom}{3cm}  
 \newlength{\marginhead} \setlength{\marginhead}{1cm}
@@ -123,18 +127,18 @@
     \begin{center}
 	  \vspace*{\fill}
     \vskip 2cm
-      \doublespacing {\huge  \textsc \@title} \par\singlespacing
+      {\setstretch{1.15}\huge\sffamily\bfseries \@title\par}
       \ifthenelse{\equal{\@subtitle}{}}{}{
         \vskip 0.5cm
-        {\Large \textsc \@subtitle}
+        {\Large\sffamily \@subtitle}
       }
       \vskip 2cm
       Author\\[2mm]
-      {\large \textsc \@author}\\[1mm]
+      {\large \@author}\\[1mm]
       \ifthenelse{\equal{\@studentid}{}}{}{{\normalsize Student ID: \@studentid}}
       \vskip 1cm
       Supervised by\\[2mm]
-      {\large \textsc \@supervisor}\\[1mm]
+      {\large \@supervisor}\\[1mm]
       \ifthenelse{\boolean{show_second_marker}}{
       \vskip 1cm
       \@secondmarker\\[1mm]
@@ -207,7 +211,7 @@
 \fancypagestyle{fancy}{
 \fancyhead{}
 \fancyfoot{}
-\fancyhead[L]{\small\itshape\color{UCLPrimary!75}\nouppercase{\rightmark}}
+\fancyhead[L]{\footnotesize\sffamily\color{black!55}\nouppercase{\rightmark}}
 \fancyfoot[R]{\small\thepage}
 \renewcommand{\headrulewidth}{0.25pt}
 \renewcommand{\headrule}{\hbox to\headwidth{%
@@ -286,11 +290,23 @@
 
 \RequirePackage{titlesec}
 \titleformat{\chapter}[display]
-  {\normalfont\bfseries}
+  {\normalfont\sffamily\bfseries}
   {\raggedleft\fontsize{82}{86}\selectfont\color{black!25}\thechapter}
   {-12pt}
   {\Huge\raggedright\color{black}}
 \titlespacing*{\chapter}{0pt}{18pt}{28pt}
+\titleformat{\section}
+  {\normalfont\sffamily\Large\bfseries}
+  {\thesection}
+  {1em}
+  {}
+\titlespacing*{\section}{0pt}{2.0ex plus 0.5ex minus 0.2ex}{0.8ex plus 0.2ex}
+\titleformat{\subsection}
+  {\normalfont\sffamily\large\bfseries}
+  {\thesubsection}
+  {1em}
+  {}
+\titlespacing*{\subsection}{0pt}{1.8ex plus 0.4ex minus 0.2ex}{0.6ex plus 0.2ex}
 
 
 \def\preamble{
@@ -378,7 +394,7 @@
 \cleardoublepage\phantomsection
 \addcontentsline{toc}{chapter}{{#1}}\mtcaddchapter 
 \chapter*{{#1}}
-\markboth{{\MakeUppercase {#1}}}{{\MakeUppercase {#1}}}
+\markboth{{#1}}{{#1}}
 \addtocounter{counter}{-1}
 % Edit the content of these files 
 \input{Conclusions} % Do not remove
