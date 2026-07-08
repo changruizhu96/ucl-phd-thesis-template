@@ -58,8 +58,8 @@
 
 \newlength{\logowidth}    \setlength{\logowidth}{55mm}
 \newlength{\logopad}      \setlength{\logopad}{17.5mm}
-\newlength{\marginleft}   \setlength{\marginleft}{3cm}   % Minimum margins are 2cm
-\newlength{\marginright}  \setlength{\marginright}{3cm} 
+\newlength{\marginleft}   \setlength{\marginleft}{4cm}   % UCL binding-edge margin minimum is 4cm
+\newlength{\marginright}  \setlength{\marginright}{4cm} 
 \newlength{\margintop}    \setlength{\margintop}{3cm}
 \newlength{\marginbottom} \setlength{\marginbottom}{3cm}  
 \newlength{\marginhead} \setlength{\marginhead}{1cm}
@@ -67,7 +67,8 @@
 
 \geometry{a4paper, top=\margintop, left=\marginleft, right=\marginright, bottom=\marginbottom, headsep=\marginhead, footskip=\marginfoot, nomarginpar}
 
-\setlength{\parskip}{2ex plus 0.5ex minus 0.2ex}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.8ex plus 0.2ex minus 0.1ex}
 
 %% Title page
 \makeatletter
@@ -187,6 +188,7 @@
 \definecolor{UCLMidPurple}{HTML}{BA82FF}
 \definecolor{UCLHeritageBlue}{HTML}{30D6FF}
 \colorlet{UCLPrimary}{UCLDarkPurple}
+\hypersetup{hidelinks}
 
 \newcommand{\chapterpublicationnote}[1]{%
   \begingroup
@@ -205,19 +207,17 @@
 \fancypagestyle{fancy}{
 \fancyhead{}
 \fancyfoot{}
-\fancyhead[L]{\color{UCLPrimary}\rightmark}
-\fancyhead[R]{\color{UCLPrimary}\thepage}
-\renewcommand{\headrulewidth}{0.5pt}
+\fancyhead[L]{\small\itshape\color{UCLPrimary!75}\nouppercase{\rightmark}}
+\fancyfoot[R]{\small\thepage}
+\renewcommand{\headrulewidth}{0.25pt}
 \renewcommand{\headrule}{\hbox to\headwidth{%
-  \color{UCLPrimary}\leaders\hrule height \headrulewidth\hfill}}
+  \color{UCLPrimary!30}\leaders\hrule height \headrulewidth\hfill}}
 \renewcommand{\footrulewidth}{0pt}
 }
 \fancypagestyle{plain}{%
   \fancyhf{}%
-  \fancyhead[R]{\color{UCLPrimary}\thepage}
-\renewcommand{\headrulewidth}{0.5pt}
-\renewcommand{\headrule}{\hbox to\headwidth{%
-  \color{UCLPrimary}\leaders\hrule height \headrulewidth\hfill}}
+\fancyfoot[R]{\small\thepage}
+\renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
   \Materialfalse
   \afterpage{\Materialtrue}%
@@ -286,8 +286,11 @@
 
 \RequirePackage{titlesec}
 \titleformat{\chapter}[display]
-  {\normalfont\bfseries\raggedright\color{UCLPrimary}}{\fontsize{72}{76}\selectfont\thechapter}{8pt}{\Huge\raggedright\color{UCLPrimary}}
-\titlespacing*{\chapter}{0pt}{0pt}{20pt}
+  {\normalfont\bfseries}
+  {\raggedleft\fontsize{82}{86}\selectfont\color{black!25}\thechapter}
+  {-12pt}
+  {\Huge\raggedright\color{black}}
+\titlespacing*{\chapter}{0pt}{18pt}{28pt}
 
 
 \def\preamble{

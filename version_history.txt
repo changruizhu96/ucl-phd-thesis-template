@@ -1,5 +1,8 @@
 This file reports the changes between template versions.
 
+*v2.0.5 - 08/07/2026
+- Introduced a quieter book-like thesis style with narrower text block, reduced paragraph spacing, lighter headers, hidden hyperlink boxes, and more restrained chapter openings.
+
 *v2.0.4 - 08/07/2026
 - Changed the default thesis body spacing from double spacing to one-and-a-half spacing.
 
