@@ -1,5 +1,8 @@
 This file reports the changes between template versions.
 
+*v2.0.10 - 09/07/2026
+- Changed numeric citations to use compact grouped brackets, so multi-key citations such as \cite{key1,key2} render as [1,2] rather than [1], [2].
+
 *v2.0.9 - 09/07/2026
 - Made symmetrical 2.5cm side margins the default layout and replaced the title-page UCL logo with a vector asset generated from the official UCL primary SVG.
 
